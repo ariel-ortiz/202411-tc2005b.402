@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html> <!-- Tomado de:
+            http://www.java2s.com/Tutorials/Javascript/Canvas_How_to/
+            Shape/Draw_Heart_shape.htm -->
+  <head>
+    <title>&iexcl;Feliz 14 de febrero!</title>
+    <script>
+      window.onload = () => {
+        let canvas = document.getElementById("canvas");
+        let context = canvas.getContext("2d");
+        let w = 100, h = 100;
+        context.strokeStyle = "#000000";
+        context.strokeWeight = 3;
+        context.shadowOffsetX = 4.0;
+        context.shadowOffsetY = 4.0;
+        context.lineWidth = 10.0;
+        context.fillStyle = "#FF0000";
+        let d = 100;
+        let k = 20;
+        context.moveTo(k, k + d / 4);
+        context.quadraticCurveTo(k, k, k + d / 4, k);
+        context.quadraticCurveTo(k + d / 2, k, k + d / 2, k + d / 4);
+        context.quadraticCurveTo(k + d / 2, k, k + d * 3/4, k);
+        context.quadraticCurveTo(k + d, k, k + d, k + d / 4);
+        context.quadraticCurveTo(k + d, k + d / 2, k + d * 3/4, k + d * 3/4);
+        context.lineTo(k + d / 2, k + d);
+        context.lineTo(k + d / 4, k + d * 3/4);
+        context.quadraticCurveTo(k, k + d / 2, k, k + d / 4);
+        context.stroke();
+        context.fill();
+      }
+    </script>
+  </head>
+    <body>
+      <canvas id="canvas" width="200" height="200"></canvas>
+    </body>
+</html>
