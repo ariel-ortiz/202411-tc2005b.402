@@ -1,0 +1,25 @@
+/*
+
+ Ejemplo de una hoja de estilo.
+
+*/
+
+body {
+  font-family: sans-serif;
+  background-color: green;
+  color: white;
+  padding: 20px;
+}
+
+h1 {
+  background-color: white;
+  color: black;
+  border: 5px solid red;
+  padding: 5px 20px;
+  margin: 30px;
+}
+
+em {
+  color: yellow;
+  border: dotted 1px yellow;
+}
