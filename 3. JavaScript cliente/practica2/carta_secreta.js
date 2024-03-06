@@ -1,3 +1,4 @@
+const emoji = document.getElementById("emoji");
 const laCarta = document.getElementById("laCarta");
 const cantidad = document.getElementById("cantidad");
 const botonPrincipal = document.getElementById("botonPrincipal");
@@ -28,8 +29,10 @@ function shuffle(a) {
 }
 
 function descubreCarta() {
+  emoji.innerText = '\u{1F620}';
   const carta = cartas.pop();
   laCarta.src = 'cards/' + carta;
+  console.log(cantidad.innerText);
   cantidad.innerText = cartas.length.toString();
   if (cartas.length == 0) {
     botonPrincipal.style.display = 'none';
