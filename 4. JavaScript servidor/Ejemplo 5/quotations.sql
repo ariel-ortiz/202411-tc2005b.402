@@ -7,11 +7,11 @@
 -- GPL version 3 License.
 --
 
-CREATE DATABASE IF NOT EXISTS web_database;
+DROP DATABASE IF EXISTS web_database;
+
+CREATE DATABASE web_database;
 
 use web_database;
-
-DROP TABLE IF EXISTS quotations;
 
 CREATE TABLE quotations (
   id       INT NOT NULL AUTO_INCREMENT,
