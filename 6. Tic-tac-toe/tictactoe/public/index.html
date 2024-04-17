@@ -1,0 +1,146 @@
+<!--
+
+  Distributed Tic-tac-toe Game
+  Copyright (C) 2024 by Ariel Ortiz
+
+-->
+
+<!DOCTYPE html>
+
+<html lang="es">
+
+  <head>
+    <meta charset="utf-8">
+    <title>Tic-tac-toe</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Boogaloo">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="javascript/tictactoe.js" defer></script>
+  </head>
+
+  <body class="w3-yellow">
+
+    <div class="app-size w3-panel w3-center">
+
+      <div class="w3-container">
+        <h1 class="w3-xxxlarge">Tic-tac-toe</h1>
+        <p>
+          By Ariel Ortiz
+        </p>
+      </div>
+
+      <div id="main-menu-div" class="w3-container">
+        <p>
+          <button id="main-create-btn" class="w3-btn w3-block w3-green w3-xlarge">
+            Create New Game
+          </button>
+        </p>
+
+        <p>
+          <button id="main-join-btn" class="w3-btn w3-block w3-blue w3-xlarge">
+            Join Existing Game
+          </button>
+        </p>
+      </div>
+
+      <div id="create-game-div" class="w3-container invisible">
+        <p>
+          <label for="game-name-input" class="w3-text-blue w3-xlarge">
+            Type the name of the game:
+          </label>
+          <input
+            id="game-name-input"
+            name="game-name"
+            type="text"
+            class="w3-input w3-border w3-xlarge">
+        </p>
+        <p>
+          <button id="create-btn" class="w3-btn w3-block w3-green w3-xlarge">
+            Create
+          </button>
+        </p>
+        <p>
+          <a href="">
+            Cancel
+          </a>
+        </p>
+      </div>
+
+      <div id="join-game-div" class="invisible">
+        <p class="w3-text-blue w3-xlarge">
+          Select a game to join:
+        </p>
+        <div id="game-list">
+        </div>
+        <p>
+          <a href="">
+            Cancel
+          </a>
+        </p>
+      </div>
+
+      <div id="wait-join-div" class="w3-xlarge invisible">
+        <p id="wait-join-message-1" class="w3-text-green">
+        </p>
+        <p class="w3-text-pink">
+          Waiting for another player to join this game.
+
+        </p>
+        <p class="w3-text-pink">
+          <span id="wait-join-message-2">0 seconds elapsed.</span>
+        </p>
+      </div>
+
+      <div id="game-board-div" class="invisible">
+        <div class="w3-xlarge">
+          <p class="w3-xlarge">
+            You are player: <span id="game-board-symbol" class="w3-xxlarge"></span>
+          </p>
+          <p id="game-board-message" class="w3-large  w3-text-blue-gray">
+            Wait...
+          </p>
+        </div>
+        <table id="board-table" class="w3-xxlarge">
+          <tr>
+            <td id="b0"></td>
+            <td id="b1"></td>
+            <td id="b2"></td>
+          </tr>
+          <tr>
+            <td id="b3"></td>
+            <td id="b4"></td>
+            <td id="b5"></td>
+          </tr>
+          <tr>
+            <td id="b6"></td>
+            <td id="b7"></td>
+            <td id="b8"></td>
+          </tr>
+        </table>
+        <br>
+        <p id="main-menu-button" class="invisible">
+          <a href="" class="w3-btn w3-red w3-xlarge">
+            Back to main menu
+          </a>
+        </p>
+      </div>
+
+    </div>
+
+    <div id="error-dialog" class="w3-modal invisible">
+      <div class="w3-modal-content w3-center">
+        <div class="w3-panel">
+          <p id="error-message-text" class="w3-xlarge">
+          </p>
+          <p>
+            <button id="close-error-dialog-btn" style="width: 100px" class="w3-button w3-red w3-large">
+              Ok
+            </button>
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>

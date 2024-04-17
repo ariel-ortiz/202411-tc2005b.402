@@ -1,0 +1,34 @@
+/******************************************************************************
+ * Distributed Tic-tac-toe Game
+ * Copyright (C) 2024 by Ariel Ortiz
+ ******************************************************************************/
+
+h1, h2, h3, body, em {
+  font-family: "Boogaloo", sans-serif;
+}
+
+table, td, th {
+  border: 2px solid black;
+}
+
+td {
+  height: 80px;
+  width: 100px;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+.invisible  {
+  display: none;
+}
+
+.app-size {
+  max-width: 300px;
+  margin: auto;
+}
+
+.choosable {
+  cursor: pointer
+}
